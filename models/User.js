@@ -9,4 +9,5 @@ const GithubSchema = new Schema({
   githubId: String
 });
 
-mongoose.model('users', userSchema);
+mongoose.model('users', (userSchema, GithubSchema));
+
