@@ -5,9 +5,5 @@ const userSchema = new Schema({
   googleId: String
 });
 
-const GithubSchema = new Schema({
-  githubId: String
-});
-
-mongoose.model('users', (userSchema, GithubSchema));
+mongoose.model('users', userSchema);
 
