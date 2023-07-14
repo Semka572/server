@@ -3,7 +3,7 @@ const GithubStrategy = require('passport-github2').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
-const UsersGit = mongoose.model('users');
+const UsersGit = mongoose.model('usersgit');
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
