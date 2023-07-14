@@ -1,33 +1,33 @@
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const GithubStrategy = require('passport-github2').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
-const User = mongoose.model('users');
+const UsersGit = mongoose.model('users');
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-  User.findById(id).then(user => {
+  UsersGit.findById(id).then(user => {
     done(null, user);
   });
 });
 
 passport.use(
-  new GoogleStrategy(
+  new GithubStrategy(
     {
-      clientID: keys.googleClientID,
-      clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback'
+      clientID: keys.githubClientID,
+      clientSecret: keys.githubClientSecret,
+      callbackURL: '/auth/github/callback'
     },
     (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleId: profile.id }).then(existingUser => {
+      UsersGit.findOne({ githubId: profile.id }).then(existingUser => {
         if (existingUser) {
           done(null, existingUser);
         } else {
-          new User({ googleId: profile.id })
+          new UsersGit({ githubId: profile.id })
             .save()
             .then(user => done(null, user));
         }
@@ -35,4 +35,3 @@ passport.use(
     }
   )
 );
-
