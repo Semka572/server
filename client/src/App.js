@@ -17,6 +17,9 @@ function App() {
         >
           Kto?
         </a>
+        <a href="/auth/google">Sign in with Google</a>
+        <a href="/auth/github">Sign in with GitHub</a>
+
       </header>
     </div>
   );
