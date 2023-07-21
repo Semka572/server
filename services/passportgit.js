@@ -23,16 +23,17 @@ passport.use(
       callbackURL: '/auth/github/callback' ,
       proxy: true
     },
-    (accessToken, refreshToken, profile, done) => {
-      UsersGit.findOne({ githubId: profile.id }).then(existingUser => {
+    async (accessToken, refreshToken, profile, done) => {
+     const existingUser = await UsersGit.findOne({ githubId: profile.id })
+
         if (existingUser) {
-          done(null, existingUser);
-        } else {
-          new UsersGit({ githubId: profile.id })
-            .save()
-            .then(user => done(null, user));
+        return done(null, existingUser);
+        } 
+
+        const user = await new UsersGit({ githubId: profile.id }).save();
+        done(null, user);
         }
-      });
-    }
+
+    
   )
 );
