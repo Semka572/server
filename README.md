@@ -4,6 +4,8 @@
 
 To use this app you will need these dependencies installed :
 
+Start with installing express
+
     "concurrently": "^8.2.0",
     "cookie-session": "^2.0.0",
     "express": "^4.18.2",
@@ -15,6 +17,7 @@ To use this app you will need these dependencies installed :
     "passport-google-oauth20": "^2.0.0",
     "picomatch": "^2.3.1"
 
+All other needed dependecies will be installed automaticly after installing express
 
 To install a module use npm install ~module~
 
