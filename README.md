@@ -4,7 +4,9 @@
 
 To use this app you will need these dependencies installed :
 
-Start with installing express
+To install a module, open terminal and : use npm install ~module~  (as an example:   npm install express   )
+ 
+Start with installing express 
 
     "concurrently": "^8.2.0",
     "cookie-session": "^2.0.0",
@@ -19,7 +21,7 @@ Start with installing express
 
 All other needed dependecies will be installed automaticly after installing express
 
-To install a module use npm install ~module~
+To install a module, open terminal and : use npm install ~module~  
 
 Be careful on passport version, it must be 0.5.3 , or an error will occure.
 
