@@ -34,3 +34,9 @@ After you start both servers, you will have a tab with address localhost:3000 , 
 
 To check current user, use /api/current_user 
 To log out of current user, use /api/logout
+
+
+# Connection to DataBase
+
+In this case I used Atlas's cloud mongoDB, it is connected after creating Cluster in db, and it will ask to choose connection method, we use "Drivers" method. To install the driver use  "npm install mongodb" and after that, add the connection string which you will see induvidually into application code. In my case it is put in the /config/prod do not forget to add your keys to .gitgnore . Every time a new account logs in, a new object with id will be added to collection.   
+
