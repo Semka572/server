@@ -12,7 +12,6 @@ After the first pull, use command: "npm install" to install all needed dependenc
 
 All other needed dependecies will be installed automaticly after installing express
 
-To install a module, open terminal and : use npm install ~module~  
 
 Be careful on passport version, it must be 0.5.3 , or an error will occure.
 
