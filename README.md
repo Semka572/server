@@ -2,18 +2,22 @@
  
 # Dependencies
 
+Before installing dependecies make sure you have installed node, to install it go to https://nodejs.org/en/download   and download lates version for your system.
+
+
 To use this app you will need these dependencies installed :
 
-To install a module, open terminal and : use npm install ~module~  (as an example:   npm install express   )
  
 Start with installing express 
 
-After the first pull, use command: "npm install" to install all needed dependencies.
+Before installing express, via terminal create a directory using command: "mkdir appname"  .  And make that your working directory using command: "cd appname" .
+Use command : "npm init"  ,  to create package.json file  , after that you can run "npm install express" , to install express.
+
+After the first pull from this repository, use command: "npm install" to install all needed dependencies.
 
 All other needed dependecies will be installed automaticly after installing express
 
 
-Be careful on passport version, it must be 0.5.3 , or an error will occure.
 
 # Starting servers
 
