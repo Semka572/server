@@ -8,16 +8,7 @@ To install a module, open terminal and : use npm install ~module~  (as an exampl
  
 Start with installing express 
 
-    "concurrently": "^8.2.0",
-    "cookie-session": "^2.0.0",
-    "express": "^4.18.2",
-    "mongodb": "^5.7.0",
-    "mongoose": "^7.3.2",
-    "nodemon": "^3.0.0",
-    "passport": "^0.5.3",
-    "passport-github2": "^0.1.12",
-    "passport-google-oauth20": "^2.0.0",
-    "picomatch": "^2.3.1"
+After the first pull, use command: "npm install" to install all needed dependencies.
 
 All other needed dependecies will be installed automaticly after installing express
 
