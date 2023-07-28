@@ -7,11 +7,6 @@ Before installing dependecies make sure you have installed node, to install it g
 
 Start by installing express.
 
-Before installing express, create a directory via the terminal using the command: "mkdir appname". Then, set that directory as the working directory with the command: "cd appname".
-Use the command: "npm init" to create the package.json file, and after that, run "npm install express" to install express.
-
-After the first pull from this repository, use the command: "npm install" to install all necessary dependencies.
-
 All other required dependencies will be installed automatically after installing express.
 
 
