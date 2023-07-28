@@ -2,6 +2,9 @@
 
 # Dependencies
 
+
+Before installing dependecies make sure you have installed node, to install it go to https://nodejs.org/en/download   and download lates version for your system.
+
 Start by installing express.
 
 Before installing express, create a directory via the terminal using the command: "mkdir appname". Then, set that directory as the working directory with the command: "cd appname".
