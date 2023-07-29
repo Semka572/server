@@ -5,7 +5,6 @@
 
 Before installing dependecies make sure you have installed node, to install it go to https://nodejs.org/en/download   and download lates version for your system.
 
-Start by installing express.
 
 All other required dependencies will be installed automatically after installing express.
 
