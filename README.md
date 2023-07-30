@@ -6,7 +6,24 @@
 Before installing dependecies make sure you have installed node, to install it go to https://nodejs.org/en/download   and download lates version for your system.
 
 
-All other required dependencies will be installed automatically after installing express.
+
+Follow these steps to set up the project on your local machine:
+
+1. Clone the repository:
+
+```
+
+git clone https://github.com/semka572/server.git
+
+cd your-repo
+
+```
+
+2. Install dependencies:
+
+Run the following command to install the required packages:"npm install".
+
+This will read the package.json file and download all the necessary dependencies listed there.
 
 
 # Starting Servers
