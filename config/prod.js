@@ -5,6 +5,6 @@ module.exports = {
     cookieKey: process.env.COOKIE_KEY,
     githubClientID: process.env.GITHUB_CLIENT_ID,
     githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
-    stripePublishableKey: procces.env.STRIPE_PUBLISHABLE_KEY,
+    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
     stripeSecretKey: procces.env.STRIPE_SECRET_KEY
 };
