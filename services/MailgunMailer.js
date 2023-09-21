@@ -6,7 +6,7 @@ var mailgun = require("mailgun-js")({
 
 class MailgunMailer {
 
-  formatAdresses(recipients) {
+  formatAddresses(recipients) {
     return recipients.map(({ email }) => email).join(",");
   }
 
@@ -14,7 +14,7 @@ class MailgunMailer {
   constructor({ subject, recipients }, content) {
     this.data = {
       from: 'semen.kurta@gmail.com' ,
-      to:  this.formatAdresses(recipients),
+      to:  this.formatAddresses(recipients),
       subject: subject,
       html: content
     };
