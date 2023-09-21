@@ -1,24 +1,26 @@
 const keys = require("../config/keys");
-
-var domain = keys.mailgunDomain;
 var mailgun = require("mailgun-js")({
-  apiKey: keys.mailgunKey,
-  domain: domain
+  apiKey: keys.mailgunKey ,
+  domain: keys.mailgunDomain
 });
 
 class MailgunMailer {
+
+  formatAdresses(recipients) {
+    return recipients.map(({ email }) => email).join(",");
+  }
+
+
   constructor({ subject, recipients }, content) {
     this.data = {
-      from: "no-reply@semen.kurta@gmail.com",
-      to: this.formatAddresses(recipients),
+      from: 'semen.kurta@gmail.com' ,
+      to:  this.formatAdresses(recipients),
       subject: subject,
       html: content
     };
   }
   
-  formatAdresses(recipients) {
-    return recipients.map(({ email }) => email).join(",");
-  }
+
 
   async send() {
     const resp = await mailgun.messages().send(this.data);

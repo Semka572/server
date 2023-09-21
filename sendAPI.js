@@ -1,6 +1,6 @@
-
- var api_key = '5be24dc0be4e37103f8f900702022af0-413e373c-6428adf8';
- var domain = 'kiritych.cloudns.ph';
+const keys = require('./config/keys.js');
+ var api_key = keys.mailgunKey;
+ var domain = keys.mailgunDomain;
  var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
   
  var data = {
