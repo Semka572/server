@@ -1,9 +1,9 @@
 const keys = require('./config/keys.js');
- var api_key = keys.mailgunKey;
- var domain = keys.mailgunDomain;
- var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+ const api_key = keys.mailgunKey;
+ const domain = keys.mailgunDomain;
+ const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
   
- var data = {
+ let data = {
    from: 'Tvaruki <me@samples.mailgun.org>',
    to: ['Semka572@gmail.com', 'semen.kurta@gmail.com'],
    subject: 'Ura',
